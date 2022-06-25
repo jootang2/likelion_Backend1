@@ -1,0 +1,148 @@
+HTML
+=====================================
+<div class="menubox">
+  <ul>
+    <li>
+      <a href="#">1차메뉴1</a>
+      <ul>
+        <li>
+          <a href="#">2차메뉴1</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">2차메뉴2</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">2차메뉴3</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">1차메뉴2</a>
+      <ul>
+        <li>
+          <a href="#">2차메뉴1</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">2차메뉴2</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">2차메뉴3</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">1차메뉴3</a>
+      <ul>
+        <li>
+          <a href="#">2차메뉴1</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">2차메뉴2</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">2차메뉴3</a>
+          <ul>
+            <li><a href="#">3차메뉴1</a></li>
+            <li><a href="#">3차메뉴2</a></li>
+            <li><a href="#">3차메뉴3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+CSS
+======================================
+
+/* 노말라이즈 */
+body,ul,li{
+  margin:0px;
+  padding:0px;
+  list-style:none;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+.menubox {
+  text-align:center;
+}
+.menubox ul {
+  background-color:#afafaf;
+}
+.menubox ul>li{
+  position:relative;
+}
+.menubox >ul ul{
+  position:absolute;
+  display:none;
+}
+.menubox >ul{
+  display:inline-block;
+  padding:0 20px;
+  border-radius:10px;
+}
+.menubox >ul>li{
+  display:inline-block;
+}
+.menubox ul>li>a{
+  font-weight:bold;
+  padding:10px;
+  display:block;
+  white-space:nowrap;
+}
+.menubox ul>li:hover>a{
+  background-color:black;
+  color:white;
+}
+.menubox ul>li:hover>ul{
+  display:block;
+}
+.menubox >ul ul ul{
+  left:100%;
+  top:0;
+}
+.menubox >ul>li:last-child ul ul{
+  left:auto;
+  right:100%;
+}
